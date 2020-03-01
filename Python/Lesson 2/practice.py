@@ -185,6 +185,3 @@ print(p3.get_y())
 print(p3.get_z())
 
 print("-"*30)
-
-
-# 4
