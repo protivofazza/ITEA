@@ -118,3 +118,30 @@ cat3 = Cat("KOT", 6)
 
 cat4 = cat1 + cat2 + cat3
 print(cat4._name)
+
+
+class Vehicle:
+
+    def __init__(self, engine, color):
+        self._engine = engine
+        self._color = color
+
+    def move(self):
+        print('Moving')
+
+
+class Car(Vehicle):
+
+    def __init__(self, engine, color, doors, wheels):
+        super().__init__(engine, color)
+        self._doors = doors
+        self._wheels = wheels
+
+    def move(self):
+        super().move()
+        print(f'Number of doors: {self._doors}')
+        print(f'Number of wheels: {self._wheels}')
+
+
+car = Car('eng', 'blue', 4, 4)
+car.move()

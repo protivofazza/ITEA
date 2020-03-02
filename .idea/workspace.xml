@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1889eb6c-5c2f-4f07-b109-a9fdee17e353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 2/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 2/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 2/oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 2/oop.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +34,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583106019676</updated>
-      <workItem from="1583106023010" duration="17000" />
+      <workItem from="1583106023010" duration="618000" />
+      <workItem from="1583141833402" duration="8822000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="581" y="168" width="748" height="777" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583175819121">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="581" y="168" width="748" height="777" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1583175819121" />
   </component>
 </project>
