@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1889eb6c-5c2f-4f07-b109-a9fdee17e353" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python/Lesson 5/class_example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/DBSHELVE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/shelve_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/shelve_example.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +93,11 @@
       <workItem from="1583427777725" duration="10348000" />
       <workItem from="1583704628946" duration="5506000" />
       <workItem from="1583748983451" duration="13529000" />
-      <workItem from="1584032303395" duration="2619000" />
+      <workItem from="1584032303395" duration="11171000" />
+      <workItem from="1584138050321" duration="360000" />
+      <workItem from="1584221170568" duration="6739000" />
+      <workItem from="1584441497323" duration="7507000" />
+      <workItem from="1584527912256" duration="271000" />
     </task>
     <servers />
   </component>
@@ -89,10 +105,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="669" y="358" width="661" height="404" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583437742633">
+    <state x="669" y="358" width="661" height="404" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584476350783">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="669" y="358" width="661" height="404" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1583437742633" />
+    <state x="669" y="358" width="661" height="404" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1584476350783" />
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584475744229">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1584475744229" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583272262621">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
