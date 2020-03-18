@@ -2,6 +2,9 @@ from threading import Thread
 import requests
 
 
+# 1-2
+
+
 thread_number = 0
 image_number = 0
 
@@ -45,3 +48,23 @@ urls = [
 
 for url_ in urls:
     download_image(url_)
+
+
+# 3
+
+class MyFileManager:
+
+    def __init__(self, path, mode='r'):
+        self._path = path
+        self._mode = mode
+
+    def __enter__(self):
+        return open(self._path, self._mode)
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
+
+with MyFileManager("test.txt", 'r') as file:
+    line = file.readline()
+    print("Text in the file:" + line)
