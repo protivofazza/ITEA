@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1889eb6c-5c2f-4f07-b109-a9fdee17e353" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/Animal9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/Animal9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/DBSHELVE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/Lesson 5/shelve_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 5/shelve_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Lesson 6/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Lesson 6/practice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +85,7 @@
       <workItem from="1584138050321" duration="360000" />
       <workItem from="1584221170568" duration="6739000" />
       <workItem from="1584441497323" duration="7507000" />
-      <workItem from="1584527912256" duration="271000" />
+      <workItem from="1584527912256" duration="1105000" />
     </task>
     <servers />
   </component>

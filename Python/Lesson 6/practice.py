@@ -68,9 +68,6 @@ class List:
         return str(self._list)
 
     def __add__(self, other):
-        #list_ = List()
-        #list_._list = self._list + other._list
-        #list_._length = self._length + other._length
         return List(*self._list, *other._list)
 
 #a = [*list1, *list2]
