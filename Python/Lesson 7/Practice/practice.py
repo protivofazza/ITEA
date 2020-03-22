@@ -5,32 +5,44 @@ DATABASE = "database.db"
 STUDENTS_TABLE_SIGNATURE = ('id', 'name', 'surname', 'department_id', 'group_id', 'identifier')
 
 
+class DataBaseConnect:
+
+    def __init__(self, database_name):
+        self._db = database_name
+        self._conn = None
+
+    def __enter__(self):
+        self._conn = sqlite3.connect(self._db)
+        return self._conn
+
+    def __exit__(self, *args):
+        self._conn.close()
+
+
+
 def read_query(query="", *args):
-    connection = sqlite3.connect(DATABASE)
-    cursor = connection.cursor()
-    result = []
-    try:
-        cursor.execute(query, list(args))
-        result = cursor.fetchall()
-    except Exception as e:
-        print("An error occured while querying: " + query)
-        print(e)
-    finally:
-        connection.close()
-        return result
+    with DataBaseConnect(DATABASE) as connection:
+        cursor = connection.cursor()
+        result = []
+        try:
+            cursor.execute(query, list(args))
+            result = cursor.fetchall()
+        except Exception as e:
+            print("An error occured while querying: " + query)
+            print(e)
+        finally:
+            return result
 
 
 def update_query(query="", *args):
-    connection = sqlite3.connect(DATABASE)
-    cursor = connection.cursor()
-    try:
-        cursor.execute(query, list(args))
-        connection.commit()
-    except Exception as e:
-        print("An error occured while querying: " + query)
-        print(e)
-    finally:
-        connection.close()
+    with DataBaseConnect(DATABASE) as connection:
+        cursor = connection.cursor()
+        try:
+            cursor.execute(query, list(args))
+            connection.commit()
+        except Exception as e:
+            print("An error occured while querying: " + query)
+            print(e)
 
 
 def print_student_grades(student_id):
