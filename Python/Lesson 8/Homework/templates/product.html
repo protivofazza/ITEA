@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% set prod = product.0 %}
+{% block title %}
+    {{ prod.1 }} {{ prod.2 }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ prod.1 }} {{ prod.2 }}</h1>
+    <h4>Category: {{ prod.4 }}</h4>
+    <h2>Price: {{ prod.7 }}$</h2>
+    <h3>{{ prod.3 }}</h3>
+    <h3>Available here: {{ prod.5 }}</h3>
+    <h4>Available on the storage: {{ prod.6 }}</h4>
+{% endblock %}
