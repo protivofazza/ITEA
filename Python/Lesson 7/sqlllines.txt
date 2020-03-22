@@ -1,0 +1,58 @@
+create table employees
+(
+    id         integer
+        constraint employees_pk
+            primary key autoincrement,
+    first_name text,
+    surname    text,
+    salary     integer,
+    leader_id  int
+        references leader
+);
+
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (1, 'Michael', 'Nickolson', 2000, 1);
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (2, 'John', 'Snow', 2000, 2);
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (3, 'Jason', 'Newell', 5000, 1);
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (4, 'Jeniffer', 'Lopes', 5000, 1);
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (5, 'Alex', 'Qwe', 1000, 2);
+INSERT INTO employees (id, first_name, surname, salary, leader_id) VALUES (6, 'Luiz', 'Suarez', 1400, null);
+create table leader
+(
+    id         integer
+        constraint leader_pk
+            primary key autoincrement,
+    first_name text,
+    last_name  text,
+    experience int,
+    salary     int
+);
+
+INSERT INTO leader (id, first_name, last_name, experience, salary) VALUES (1, 'John', 'Michaels', 10, 15000);
+INSERT INTO leader (id, first_name, last_name, experience, salary) VALUES (2, 'David', 'Villia', 3, 4000);
+-- No source text available
+INSERT INTO sqlite_master (type, name, tbl_name, rootpage, sql) VALUES ('table', 'sqlite_sequence', 'sqlite_sequence', 3, 'CREATE TABLE sqlite_sequence(name,seq)');
+INSERT INTO sqlite_master (type, name, tbl_name, rootpage, sql) VALUES ('table', 'leader', 'leader', 4, 'CREATE TABLE leader
+(
+	id integer
+		constraint leader_pk
+			primary key autoincrement,
+	first_name text,
+	last_name text,
+	experience int,
+	salary int
+)');
+INSERT INTO sqlite_master (type, name, tbl_name, rootpage, sql) VALUES ('table', 'employees', 'employees', 5, 'CREATE TABLE "employees"
+(
+	id integer
+		constraint employees_pk
+			primary key autoincrement,
+	first_name text,
+	surname text,
+	salary integer,
+	leader_id int
+		constraint leader_id
+			references leader
+)');
+-- No source text available
+INSERT INTO sqlite_sequence (name, seq) VALUES ('leader', 2);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('employees', 6);
