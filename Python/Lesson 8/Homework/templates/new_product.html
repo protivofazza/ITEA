@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Add New Product {% endblock %}
+{% block body %}
+    <h3>Categories:</h3>
+    {% for id_, name_ in categories %}
+        <h4>  {{id_}} - {{name_}}</h4>
+    {% endfor %}
+    <h3>Adding form:</h3>
+    <form action="new_product" method="post">
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="model" placeholder="Model"><br>
+        <input type="text" name="description" placeholder="Description"><br>
+        <input type="number" name="category_id" placeholder="Category Id"><br>
+        <input type="number" name="available_in_shop" placeholder="Available In Shop"><br>
+        <input type="number" name="available_on_storage" placeholder="Available On Storage"><br>
+        <input type="number" name="price" placeholder="Price"><br>
+        <input type="submit">
+    </form>
+{% endblock %}

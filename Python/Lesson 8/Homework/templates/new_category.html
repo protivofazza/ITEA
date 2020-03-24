@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Add New Category {% endblock %}
+{% block body %}
+    <h3>Adding form:</h3>
+    <form action="new_category" method="post">
+        <input type="text" name="new_category_name" placeholder="Type New Category's Name"><br>
+        <input type="submit">
+    </form>
+{% endblock %}
