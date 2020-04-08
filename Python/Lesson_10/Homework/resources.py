@@ -38,14 +38,14 @@ class GoodsResource(Resource):
             goods.save()
             return GoodsSchema().dump(goods)
         else:
-            return GoodsSchema(exclude=['category.parent_category']).dump(Goods.objects, many=True)
+            return GoodsSchema().dump(Goods.objects, many=True)
 
     def post(self):
         try:
             goods = GoodsSchema().load(request.get_json())
         except ValidationError as err:
             return str(err)
-        return GoodsSchema(exclude=['category.parent_category']).dump(Goods.objects.create(**goods).save())
+        return GoodsSchema().dump(Goods.objects.create(**goods).save())
 
     def put(self):
         pass

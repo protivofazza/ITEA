@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from resources import CategoryResource, GoodsResource, TotalSumResource
+import models as m
 import db_generator
 
 app = Flask(__name__)

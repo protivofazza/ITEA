@@ -1,4 +1,5 @@
 from models import Category, Goods
+from schemas import CategorySchema, GoodsSchema
 import random
 
 CATEGORIES = (
@@ -16,9 +17,10 @@ def add_categories(add_root_categories_not_sub=True):
     if add_root_categories_not_sub:
         for category in CATEGORIES:
             if category.get("parent_category", None) is None:
-                db_category = Category.objects.filter(name=category['name'])
+                db_category = Category.objects.filter(**category)
                 if db_category:
                     continue
+                category = CategorySchema().load(category)
                 print(f"Added: {Category.objects.create(**category).save()}")
     else:
         for category in CATEGORIES:
@@ -32,7 +34,8 @@ def add_categories(add_root_categories_not_sub=True):
                 if db_category:
                     print(f"Category {category} already exists")
                     continue
-                category['parent_category'] = parent_category[0].id
+                category['parent_category'] = str(parent_category[0].id)
+                category = CategorySchema().load(category)
                 print(f"Added: {Category.objects.create(**category).save()}")
 
 
