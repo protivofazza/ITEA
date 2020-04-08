@@ -2,6 +2,7 @@ from telebot import TeleBot, types
 from config import TOKEN, COLLECTOR, comments_kb
 import validators
 from models import Person
+from schemas import PersonSchema
 
 bot = TeleBot(TOKEN)
 current_state = -1
@@ -11,6 +12,7 @@ new_person = {}
 def add_new_person_into_db(person):
     global current_state
     current_state = -1
+    person = PersonSchema().load(person)
     print(Person.objects.create(**person).save())
 
 
