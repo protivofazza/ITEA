@@ -15,9 +15,9 @@ class AuthorSchema(Schema):
 
 class PublicationSchema(Schema):
     id = fields.String(dump_only=True)
-    title = fields.String(required=True, validate=validate.Length(min=1, max=50))
-    post = fields.String(required=True, validate=validate.Length(min=1, max=50))
+    title = fields.String(required=True, validate=validate.Length(min=1, max=300))
+    post = fields.String(required=True, validate=validate.Length(min=1, max=10000))
     date = fields.DateTime(required=True)
     author = fields.String(required=True)
-    tags = fields.List(fields.Nested(TagSchema))
+    tags = fields.List(fields.String())
     seen_by = fields.Int(validate=validate.Range(min=0))

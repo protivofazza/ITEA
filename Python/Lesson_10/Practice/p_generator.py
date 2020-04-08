@@ -2,6 +2,7 @@ import random
 from typing import List, Tuple
 from datetime import datetime
 from p_models import Tag, Author, Publication
+import p_schemas as s
 
 TAGS = ('Fantasy', 'Sci-Fi', 'Mystery', 'Thriller', 'Romance', 'Westerns', 'Dystopian', 'Contemporary')
 AUTHORS = (
@@ -59,11 +60,13 @@ def add_tags():
     total_len = len(TAGS)
     _len = 0
     for local_tag in TAGS:
-        base_tag = Tag.objects.filter(name=local_tag)
+        local_tag = {"name": local_tag}
+        base_tag = Tag.objects.filter(**local_tag)
         if base_tag:
             continue
         _len += 1
-        Tag.objects.create(name=local_tag).save()
+        local_tag = s.TagSchema().load(local_tag)
+        Tag.objects.create(**local_tag).save()
     print(f"Created {_len}/{total_len} tags")
 
 
@@ -80,11 +83,13 @@ def add_authors(max_number_of_authors_to_add=1000):
     if authors_to_add >= 0:
         for i in range(authors_to_add):
             name, surname = AUTHORS[i][0], AUTHORS[i][1]
-            base_author = Author.objects.filter(name=name, surname=surname)
+            author = {"name": name, "surname": surname}
+            base_author = Author.objects.filter(**author)
             if base_author:
                 continue
             _len += 1
-            Author.objects.create(name=name, surname=surname).save()
+            author = s.AuthorSchema().load(author)
+            Author.objects.create(**author).save()
             if _len >= max_number_of_authors_to_add:
                 break
     print(f"Created {_len}/{max_number_of_authors_to_add} authors")
@@ -95,24 +100,28 @@ def add_posts():
     db_tags = Tag.objects
     db_authors = Author.objects
     # print(db_authors)
+    post = {}
     for data in POSTS:
         author = db_authors[random.randint(0, len(db_authors) - 1)]
         # print(author)
         author.number_of_publications += 1
         author.save()
+        post['author'] = str(author.id)
 
         tags_number = random.randint(1, 4)
         tags = []
         while tags_number > 0:
             tag = db_tags[random.randint(0, len(db_tags) - 1)]
             if tag not in tags:
-                tags.append(tag)
+                tags.append(str(tag.id))
                 tags_number -= 1
-
-        title = data[0]
-        post = data[1]
-
-        Publication.objects.create(title=title, post=post, date=datetime.now(), author=author, tags=tags).save()
+        post['tags'] = tags
+        post['date'] = f"{str(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'))}.000000+00:00"
+        post['title'] = data[0]
+        post['post'] = data[1]
+        print(post)
+        post = s.PublicationSchema().load(post)
+        Publication.objects.create(**post).save()
     print(f"Created {len(POSTS)} posts")
 
 

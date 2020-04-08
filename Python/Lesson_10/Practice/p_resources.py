@@ -80,8 +80,7 @@ class PublicationResource(Resource):
         publication = request.get_json()
         if 'date' not in publication:
             print("HELLO")
-            publication['date'] = f"{str(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'))}" \
-                                  f".000000+00:00"
+            publication['date'] = f"{str(datetime.now().strftime('%Y-%m-%dT%H:%M:%S'))}.000000+00:00"
             print(str(publication['date']))
         try:
             publication = PublicationSchema().load(request.get_json())
